@@ -1,0 +1,34 @@
+project:
+  name: moobs-sales-forecast
+  target: sales
+  horizon: 2
+  frequency: weekly
+
+data:
+  path: data/raw/sapin_dataset_stores.csv
+  date_column: date
+  store_column: store_id
+  target_column: sales
+
+split:
+  strategy: temporal
+  target_cutoff: "2024-10-07"
+
+features:
+  lags: [1, 2, 4, 26, 52]
+  rolling_windows: [4, 8]
+  rolling_statistics:
+    - mean
+    - std
+  calendar:
+    - target_week
+  store:
+    - store_id
+    - Province
+    - Population
+    - sellers
+
+evaluation:
+  metrics:
+    - mae
+    - rmse
