@@ -3,4 +3,5 @@ numpy
 matplotlib
 seaborn
 jupyter
+xgboost>=3.0
 

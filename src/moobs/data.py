@@ -5,7 +5,7 @@ import pandas as pd
 
 # Racine du projet : .../moobs-sales-forecast
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DATA_PATH = PROJECT_ROOT / "data" / "sapin_dataset_stores.csv"
+DATA_PATH = PROJECT_ROOT / "data" / "raw" / "sapin_dataset_stores.csv"
 REQUIRED_COLUMNS = {"store_id", "date", "sales"}
 
 
