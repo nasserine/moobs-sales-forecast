@@ -4,4 +4,7 @@ matplotlib
 seaborn
 jupyter
 xgboost>=3.0
-
+joblib
+reportlab
+matplotlib
+statsmodels
